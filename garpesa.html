@@ -7,7 +7,7 @@
 
   <style>
     body {
-      background: linear-gradient(to bottom right, hsl(336, 76%, 73%), #e995b1);
+      background: linear-gradient(to bottom right, #ffe6f0, #fff0f5);
       font-family: 'Verdana', sans-serif;
       margin: 0;
       padding: 0;
@@ -20,7 +20,6 @@
       color: #d63384;
       text-shadow: 2px 2px 6px #ffb6c1;
       margin-top: 20px;
-      animation: fadeIn 2s ease-in-out;
     }
 
     h2 {
@@ -55,22 +54,18 @@
       text-transform: uppercase;
     }
 
-    #about, #skills, #favorites, #hobbies, #favflower, #favsong, #dog, #me, #us {
-      background: #f0ced9;
+    /* Sections */
+    #about, #skills, #favorites, #hobbies, #favsong, #dog, #me {
+      background: #fff0f5;
       border-radius: 20px;
       padding: 25px;
       width: 70%;
       margin: 30px auto;
       box-shadow: 0 6px 12px rgba(0,0,0,0.1);
-      transition: transform 0.3s;
-      border: 2px dashed #fff; 
+      border: 2px solid #ffffff; /* white border */
     }
 
-    #about:hover, #skills:hover, #favorites:hover, #hobbies:hover, 
-    #favflower:hover, #favsong:hover, #dog:hover, #me:hover, #us:hover {
-      transform: scale(1.02);
-    }
-
+    /* Gallery */
     .bl-gallery {
       display: flex;
       justify-content: space-around;
@@ -80,14 +75,13 @@
 
     .bl-card {
       width: 30%;
-      background: #fff; /* white background inside card */
+      background: #fff;
       border-radius: 15px;
       overflow: hidden;
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
       margin: 10px;
-      transition: transform 0.3s;
       text-align: center;
-      border: 2px solid #f0ced9;
+      border: 3px solid #f4bfbf; /* white border */
     }
 
     .bl-card img {
@@ -97,18 +91,14 @@
       display: block;
     }
 
-    .bl-card:hover {
-      transform: scale(1.05);
-    }
-
     .bl-card p {
       font-weight: bold;
-      color: #eb9cc3;
+      color: #d63384;
       padding: 10px;
       margin: 0;
-      text-align: center;
     }
 
+    /* Cards (photo, song, dog) */
     .photo-card, .song-card, .dog-card {
       width: 60%;
       background: #fff;
@@ -117,9 +107,8 @@
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
       margin: 20px auto;
       text-align: center;
-      transition: transform 0.3s;
       padding: 15px;
-      border: 2px solid #f0ced9;
+      border: 4px solid #893737; /* white border */
     }
 
     .photo-card img, .song-card img, .dog-card img {
@@ -135,66 +124,27 @@
       font-weight: bold;
       color: #d63384;
       margin-top: 10px;
-      text-align: center;
-    }
-
-    .photo-card:hover, .song-card:hover, .dog-card:hover {
-      transform: scale(1.05);
     }
 
     footer {
       text-align: center;
       margin: 30px 0;
-      color: #151414;
+      color: #ff6699;
       font-style: italic;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(-20px); }
-      to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
 <body>
   <h1>🌸 Welcome to My Portfolio 🌸</h1>
-  <h1>ఇ ◝‿◜ ఇ</h1>
 
-  <!-- ME SECTION -->
-  <div id="me">
-    <h2>ME ^⎚-⎚^ </h2>
-    <div class="bl-gallery">
-      <div class="bl-card">
-        <img src="c:\Users\Sofia\Downloads\11715cc6-b779-46ec-9dca-c70a4c984238.jpg" alt="me 1">
-      </div>
-      <div class="bl-card">
-        <img src="c:\Users\Sofia\Downloads\56cfa2fc-92d9-47fd-beb9-c43a886f9062.jpg" alt="me 2">
-      </div>
-      <div class="bl-card">
-        <img src="c:\Users\Sofia\Downloads\364c9691-076c-4afd-a8a8-1abfd885daca.jpg" alt="me 3">
-      </div>
-    </div>
-  </div>
-
-  <!-- FRIENDS SECTION -->
   <div id="us">
     <h2>My Friends</h2>
-    <div class="bl-gallery">
-      <div class="bl-card">
-        <img src="c:\Users\Sofia\Downloads\7b4c4104-7f30-48ab-9a56-32768d34edef.jpg" alt="Friends 1">
-      </div>
-      <div class="bl-card">
-        <img src="c:\Users\Sofia\Downloads\baeb9499-89c0-4447-b51f-3e6899fcecdc.jpg" alt="Friends 2">
-      </div>
-      <div class="bl-card">
-        <img src="c:\Users\Sofia\Downloads\aa4c78b0-f01c-4311-b7a5-8f7627266cfc.jpg" alt="Friends 3">
-      </div>
-      <div class="bl-card">
-        <img src="c:\Users\Sofia\Downloads\cd39271f-4761-430a-b555-a7fdb5966bc9.jpg" alt="Friends 4">
-      </div>
+    <div class="photo-card">
+      <img src="c:\Users\Sofia\Downloads\7b4c4104-7f30-48ab-9a56-32768d34edef.jpg" alt="My friends">
+      <p>MY FRIENDS✨</p>
     </div>
   </div>
 
-  <!-- ABOUT -->
   <div id="about">
     <h2>About Me</h2>
     <p>Hello! My name is 
@@ -205,7 +155,6 @@
     </p>
   </div>
 
-  <!-- SKILLS -->
   <div id="skills">
     <h2>My Skills</h2>
     <p>
@@ -216,19 +165,15 @@
     </p>
   </div>
 
-  <!-- FAVORITES -->
   <div id="favorites">
     <h2>My Favorites</h2>
     <ul>
       <li><b>Matcha 🍵</b> – calming, refreshing, and gives me cozy vibes.</li>
       <li><b>Buldak 🔥</b> – my ultimate spicy comfort food.</li>
       <li><b>Dutch Mill 🥤</b> – creamy, sweet, and always a mood booster.</li>
-      <li><b>Seafood 🍱</b> – delicious and flavorful, it always reminds me of fresh meals and happy moments. 
-      I love how seafood can be cooked in many ways—grilled, fried, or boiled—and it never fails to make me feel satisfied. 🌊✨</li>
     </ul>
   </div>
 
-  <!-- HOBBIES -->
   <div id="hobbies">
     <h2>My Hobbies & Interests</h2>
     <p>I really love watching <span class="highlight">Thai BL Series</span> 🎬. Here are some of my faves:</p>
@@ -248,41 +193,20 @@
     </div>
   </div>
 
-  <!-- FLOWER -->
-  <div id="favflower">
-    <h2>My Favorite Flower</h2>
-    <p>I really love <span class="highlight">Daisies</span> 🌼.  
-       because it reminds me of my fav person which is <span class="highlight">Aou Thanaboon</span> that's his fav flower also. Aou gives off the same warmth and positivity. His charm feels natural, simple, and genuine like how a daisy can brighten up any garden without trying too hard. For me, Aou is like a daisy soft and comforting.</p>
-    
-    <div class="bl-gallery">
-      <div class="bl-card">
-        <img src="c:\Users\Sofia\Downloads\daisyyy.jpg" alt="Daisy Flower">
-        <p>Daisy 🌼</p>
-      </div>
-      <div class="bl-card">
-        <img src="c:\Users\Sofia\Downloads\aou thanaboon.jpg" alt="Aou Thanaboon">
-        <p>MY FAV PERSON</p>
-      </div>
-    </div>
-  </div>
-
-  <!-- SONG -->
   <div id="favsong">
     <h2>My Favorite Song</h2>
     <div class="song-card">
       <img src="c:\Users\Sofia\Downloads\stato.jpg" alt="Statue Song Cover">
-      <p>STATUE 🎶</p>
-      <p>For me, the song “Statue” is about someone who is very special and irreplaceable. The lyrics show deep love and appreciation, like seeing that person as the most beautiful and precious thing, almost like a masterpiece. But unlike a real statue that just stands still, this person brings life, happiness, and inspiration. The song reminds me that when someone truly means so much to you, they become your source of strength and comfort, and you’ll always be grateful for them. 💖✨</p>
+      <p>STATUE 🎶 For me, the song “Statue” is about someone who is very special and irreplaceable. The lyrics show deep love and appreciation, like seeing that person as the most beautiful and precious thing, almost like a masterpiece. But unlike a real statue that just stands still, this person brings life, happiness, and inspiration. The song reminds me that when someone truly means so much to you, they become your source of strength and comfort, and you’ll always be grateful for them. 💖✨</p>
     </div>
   </div>
 
-  <!-- DOG -->
   <div id="dog">
     <h2>My Dog</h2>
     <div class="dog-card">
       <img src="c:\Users\Sofia\Downloads\8fb28230-49a2-4e8b-9b95-f03b3392f999.jpg" alt="My Dog">
-      <p>CHINGKI 🐶</p>
-      <p>she's currently 2 years old, turning 3 years old this january 22:> she's so masungit but i love her so much hehehe. She's my daughter (real)</p>
+      <p>CHINGKI 🐶 she's currently 2 years old, turning 3 years old. She's my daughter (frrr) she's so masungit but i luvvv herr soo muchhh yeyyyyy!!!</p>
+
     </div>
   </div>
 

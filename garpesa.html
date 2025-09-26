@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+
+  <style>
+    body {
+      background: linear-gradient(to bottom right, hsl(336, 76%, 73%), #e995b1);
+      font-family: 'Verdana', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    h1 {
+      text-align: center;
+      font-family: 'Georgia', serif;
+      font-size: 3em;
+      color: #d63384;
+      text-shadow: 2px 2px 6px #ffb6c1;
+      margin-top: 20px;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    h2 {
+      text-align: center;
+      color: #ff4081;
+      font-family: Arial, sans-serif;
+      text-transform: capitalize;
+      margin-bottom: 10px;
+    }
+
+    p {
+      text-align: justify;
+      font-size: 18px;
+      font-weight: 300;
+      line-height: 1.7;
+      color: #444;
+    }
+
+    ul {
+      font-size: 17px;
+      padding-left: 40px;
+      color: #333;
+    }
+
+    li {
+      margin: 10px 0;
+    }
+
+    .highlight {
+      color: rgb(255, 105, 180);
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    #about, #skills, #favorites, #hobbies, #favflower, #favsong, #dog, #me, #us {
+      background: #f0ced9;
+      border-radius: 20px;
+      padding: 25px;
+      width: 70%;
+      margin: 30px auto;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+      border: 2px dashed #fff; 
+    }
+
+    #about:hover, #skills:hover, #favorites:hover, #hobbies:hover, 
+    #favflower:hover, #favsong:hover, #dog:hover, #me:hover, #us:hover {
+      transform: scale(1.02);
+    }
+
+    .bl-gallery {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+
+    .bl-card {
+      width: 30%;
+      background: #fff; /* white background inside card */
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      margin: 10px;
+      transition: transform 0.3s;
+      text-align: center;
+      border: 2px solid #f0ced9;
+    }
+
+    .bl-card img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .bl-card:hover {
+      transform: scale(1.05);
+    }
+
+    .bl-card p {
+      font-weight: bold;
+      color: #eb9cc3;
+      padding: 10px;
+      margin: 0;
+      text-align: center;
+    }
+
+    .photo-card, .song-card, .dog-card {
+      width: 60%;
+      background: #fff;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      margin: 20px auto;
+      text-align: center;
+      transition: transform 0.3s;
+      padding: 15px;
+      border: 2px solid #f0ced9;
+    }
+
+    .photo-card img, .song-card img, .dog-card img {
+      width: 100%;
+      max-width: 300px;
+      height: auto;
+      border-radius: 10px;
+      display: block;
+      margin: 0 auto;
+    }
+
+    .photo-card p, .song-card p, .dog-card p {
+      font-weight: bold;
+      color: #d63384;
+      margin-top: 10px;
+      text-align: center;
+    }
+
+    .photo-card:hover, .song-card:hover, .dog-card:hover {
+      transform: scale(1.05);
+    }
+
+    footer {
+      text-align: center;
+      margin: 30px 0;
+      color: #151414;
+      font-style: italic;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <h1>🌸 Welcome to My Portfolio 🌸</h1>
+  <h1>ఇ ◝‿◜ ఇ</h1>
+
+  <!-- ME SECTION -->
+  <div id="me">
+    <h2>ME ^⎚-⎚^ </h2>
+    <div class="bl-gallery">
+      <div class="bl-card">
+        <img src="c:\Users\Sofia\Downloads\11715cc6-b779-46ec-9dca-c70a4c984238.jpg" alt="me 1">
+      </div>
+      <div class="bl-card">
+        <img src="c:\Users\Sofia\Downloads\56cfa2fc-92d9-47fd-beb9-c43a886f9062.jpg" alt="me 2">
+      </div>
+      <div class="bl-card">
+        <img src="c:\Users\Sofia\Downloads\364c9691-076c-4afd-a8a8-1abfd885daca.jpg" alt="me 3">
+      </div>
+    </div>
+  </div>
+
+  <!-- FRIENDS SECTION -->
+  <div id="us">
+    <h2>My Friends</h2>
+    <div class="bl-gallery">
+      <div class="bl-card">
+        <img src="c:\Users\Sofia\Downloads\7b4c4104-7f30-48ab-9a56-32768d34edef.jpg" alt="Friends 1">
+      </div>
+      <div class="bl-card">
+        <img src="c:\Users\Sofia\Downloads\baeb9499-89c0-4447-b51f-3e6899fcecdc.jpg" alt="Friends 2">
+      </div>
+      <div class="bl-card">
+        <img src="c:\Users\Sofia\Downloads\aa4c78b0-f01c-4311-b7a5-8f7627266cfc.jpg" alt="Friends 3">
+      </div>
+      <div class="bl-card">
+        <img src="c:\Users\Sofia\Downloads\cd39271f-4761-430a-b555-a7fdb5966bc9.jpg" alt="Friends 4">
+      </div>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <div id="about">
+    <h2>About Me</h2>
+    <p>Hello! My name is 
+      <span style="color:#ff69b4; font-weight:bold;">SOFIA</span> 
+      but you can call me <span style="color:#ff69b4; font-weight:bold;">fyang, piang, or pia</span> just don't call me "MAE" and this is my <span class="highlight">personal webpage</span>.  
+      I enjoy creating simple yet aesthetic designs and learning new skills.  
+      My dream job is to become a <b>CHEF</b>, but since I’m a MAWD student, I embrace this opportunity to grow, explore, and challenge myself outside my comfort zone. ✨
+    </p>
+  </div>
+
+  <!-- SKILLS -->
+  <div id="skills">
+    <h2>My Skills</h2>
+    <p>
+      One of my favorite skills is <span class="highlight">dancing and making crochet</span> 💃🧶.  
+      Dancing makes me feel alive, it’s where I can express myself, build confidence, and connect with the rhythm of music.  
+      Crochet, on the other hand, lets me feel creative even if I don’t know how to draw.  
+      Each loop and stitch reminds me that art can be made in many forms. 🌷
+    </p>
+  </div>
+
+  <!-- FAVORITES -->
+  <div id="favorites">
+    <h2>My Favorites</h2>
+    <ul>
+      <li><b>Matcha 🍵</b> – calming, refreshing, and gives me cozy vibes.</li>
+      <li><b>Buldak 🔥</b> – my ultimate spicy comfort food.</li>
+      <li><b>Dutch Mill 🥤</b> – creamy, sweet, and always a mood booster.</li>
+      <li><b>Seafood 🍱</b> – delicious and flavorful, it always reminds me of fresh meals and happy moments. 
+      I love how seafood can be cooked in many ways—grilled, fried, or boiled—and it never fails to make me feel satisfied. 🌊✨</li>
+    </ul>
+  </div>
+
+  <!-- HOBBIES -->
+  <div id="hobbies">
+    <h2>My Hobbies & Interests</h2>
+    <p>I really love watching <span class="highlight">Thai BL Series</span> 🎬. Here are some of my faves:</p>
+    <div class="bl-gallery">
+      <div class="bl-card">
+        <img src="c:\Users\Sofia\Downloads\bad.jpg" alt="Bad Buddy Series Poster">
+        <p>Bad Buddy</p>
+      </div>
+      <div class="bl-card">
+        <img src="c:\Users\Sofia\Downloads\msp.jpg" alt="My School President Poster">
+        <p>My School President</p>
+      </div>
+      <div class="bl-card">
+        <img src="c:\Users\Sofia\Downloads\we are.jpg" alt="We Are The Series Poster">
+        <p>We Are: The Series</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- FLOWER -->
+  <div id="favflower">
+    <h2>My Favorite Flower</h2>
+    <p>I really love <span class="highlight">Daisies</span> 🌼.  
+       because it reminds me of my fav person which is <span class="highlight">Aou Thanaboon</span> that's his fav flower also. Aou gives off the same warmth and positivity. His charm feels natural, simple, and genuine like how a daisy can brighten up any garden without trying too hard. For me, Aou is like a daisy soft and comforting.</p>
+    
+    <div class="bl-gallery">
+      <div class="bl-card">
+        <img src="c:\Users\Sofia\Downloads\daisyyy.jpg" alt="Daisy Flower">
+        <p>Daisy 🌼</p>
+      </div>
+      <div class="bl-card">
+        <img src="c:\Users\Sofia\Downloads\aou thanaboon.jpg" alt="Aou Thanaboon">
+        <p>MY FAV PERSON</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- SONG -->
+  <div id="favsong">
+    <h2>My Favorite Song</h2>
+    <div class="song-card">
+      <img src="c:\Users\Sofia\Downloads\stato.jpg" alt="Statue Song Cover">
+      <p>STATUE 🎶</p>
+      <p>For me, the song “Statue” is about someone who is very special and irreplaceable. The lyrics show deep love and appreciation, like seeing that person as the most beautiful and precious thing, almost like a masterpiece. But unlike a real statue that just stands still, this person brings life, happiness, and inspiration. The song reminds me that when someone truly means so much to you, they become your source of strength and comfort, and you’ll always be grateful for them. 💖✨</p>
+    </div>
+  </div>
+
+  <!-- DOG -->
+  <div id="dog">
+    <h2>My Dog</h2>
+    <div class="dog-card">
+      <img src="c:\Users\Sofia\Downloads\8fb28230-49a2-4e8b-9b95-f03b3392f999.jpg" alt="My Dog">
+      <p>CHINGKI 🐶</p>
+      <p>she's currently 2 years old, turning 3 years old this january 22:> she's so masungit but i love her so much hehehe. She's my daughter (real)</p>
+    </div>
+  </div>
+
+  <footer>
+    🌸 Thank you for visiting my page! Stay happy always 💕 🌸
+  </footer>
+</body>
+</html>

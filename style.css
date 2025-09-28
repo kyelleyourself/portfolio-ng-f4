@@ -302,6 +302,7 @@ html {
   width: 160px;
 }
 
+ 
 
 .edits-row {
   display: grid;
@@ -309,31 +310,40 @@ html {
   margin-bottom: 20px;
 }
 
-/* ROW 1 = 3 squares */
+/* row 1 → 3 squares */
 .square-row {
   grid-template-columns: repeat(3, 1fr);
 }
 
 .square-row video {
   width: 100%;
-  aspect-ratio: 1/1;     /* square */
+  aspect-ratio: 1/1;
   object-fit: cover;
   border-radius: 10px;
   box-shadow: 0 10px 28px rgba(20,60,100,0.06);
 }
 
-/* ROW 2 = 2 rectangles */
-.rect-row {
-  grid-template-columns: repeat(2, 1fr);
+/* row 2 → 2 rectangles */
+.mixed-row {
+  grid-template-columns: repeat(3, 1fr);
 }
 
-.rect-row video {
+.mixed-row .square video {
+  aspect-ratio: 1/1;
+}
+
+.mixed-row .rect video {
+  aspect-ratio: 5/4;
+}
+
+.mixed-row video {
   width: 100%;
-  aspect-ratio: 5/4;     /* or try 7/5 */
   object-fit: cover;
   border-radius: 10px;
   box-shadow: 0 10px 28px rgba(20,60,100,0.06);
 }
+
+
 
 
 #connect .socials {

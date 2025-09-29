@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>F4 Meteor Shower</title>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background: linear-gradient(135deg, #a18cd1, #fbc2eb, #87CEFA); 
+      font-family: 'Quicksand', sans-serif;
+      margin: 0;
+      padding: 0;
+      position: relative;
+      overflow-x: hidden;
+      color: #333;
+      animation: gradientMove 12s ease infinite;
+      background-size: 300% 300%;
+    }
+
+    @keyframes gradientMove {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    body::before, body::after {
+      content: "";
+      position: fixed;
+      width: 200%;
+      height: 200%;
+      top: -50%;
+      left: -50%;
+      background: radial-gradient(circle, rgba(255,255,255,0.7) 10%, transparent 70%) repeat;
+      background-size: 120px 120px;
+      animation: sparkle 20s linear infinite;
+      pointer-events: none;
+      z-index: 0;
+    }
+    body::after {
+      animation-duration: 12s;
+      background: radial-gradient(circle, rgba(255, 182, 255, 0.4) 15%, transparent 70%) repeat;
+      background-size: 160px 160px;
+    }
+
+    @keyframes sparkle {
+      from { transform: translateY(0); opacity: 1; }
+      to { transform: translateY(-200px); opacity: 0.6; }
+    }
+
+    header {
+      background: rgba(255,255,255,0.9);
+      padding: 20px 0;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    header h1 {
+      font-family: 'Fredoka One', cursive;
+      font-size: 2.5rem;
+      color: #6a5acd;
+      text-shadow: 2px 2px 8px #d8b9ff;
+      margin: 0;
+      transition: transform 0.4s ease, color 0.4s ease;
+      letter-spacing: 2px;
+    }
+
+    header h1:hover {
+      transform: scale(1.08) rotate(-2deg);
+      color: #ff6ec7;
+    }
+
+    main {
+      padding: 40px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    
+    .f4-highlight {
+      margin: 30px auto;
+      text-align: center;
+    }
+
+    .f4-highlight img {
+      width: 100%;
+      max-width: 700px;
+      border-radius: 20px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+      transition: transform 0.4s ease;
+    }
+
+    .f4-highlight img:hover {
+      transform: scale(1.05);
+    }
+
+    section {
+      background: #ffffffcc;
+      border-radius: 25px;
+      padding: 30px;
+      width: 85%;
+      max-width: 1000px;
+      margin: 25px auto;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+      text-align: center;
+      border: 2px dashed #cda4ff;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    section:hover {
+      transform: scale(1.02);
+      box-shadow: 0 12px 30px rgba(186,85,211,0.3);
+    }
+
+    section h2 {
+      color: #6a5acd;
+      margin-bottom: 15px;
+      font-family: 'Fredoka One', cursive;
+      font-size: 1.8rem;
+    }
+
+    section h2::after {
+      content: " ✧･ﾟ: *✧･ﾟ:* ";
+      font-size: 0.9rem;
+      color: #ff69b4;
+      display: block;
+      margin-top: 5px;
+    }
+
+    .bl-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .bl-card {
+      background: #fff;
+      border-radius: 20px;
+      padding: 12px;
+      width: 160px;
+      box-shadow: 0 5px 18px rgba(0,0,0,0.15);
+      transition: transform 0.4s ease, box-shadow 0.4s ease, background 0.4s ease;
+      border: 2px solid #e6d0ff;
+    }
+
+    .bl-card img {
+      width: 100%;
+      border-radius: 15px;
+      transition: transform 0.4s ease;
+    }
+
+    .bl-card p {
+      margin-top: 8px;
+      font-size: 1rem;
+      color: #444;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    .bl-card:hover {
+      transform: scale(1.08) rotate(-1deg);
+      box-shadow: 0 10px 25px rgba(186,85,211,0.4);
+      background: #f8f0ff;
+    }
+
+    .bl-card:hover img {
+      transform: scale(1.1);
+    }
+
+    .bl-card:hover p {
+      color: #6a5acd;
+    }
+
+    footer {
+      background: rgba(255,255,255,0.95);
+      text-align: center;
+      padding: 18px;
+      margin-top: 50px;
+      border-top: 3px solid #d1b3ff;
+      font-size: 0.95rem;
+      color: #444;
+    }
+
+    footer p {
+      margin: 5px 0;
+    }
+
+    footer span {
+      color: #6a5acd;
+      font-weight: bold;
+    }
+
+    footer::after {
+      content: "⋆｡°✩";
+      display: block;
+      margin-top: 8px;
+      color: #ff69b4;
+      font-size: 1.2rem;
+      animation: twinkle 10s infinite alternate;
+    }
+
+    @keyframes twinkle {
+      from { opacity: 0.5; transform: scale(1); }
+      to { opacity: 1; transform: scale(1.2); }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>F4 METEOR SHOWER MAIN PAGE! ^⎚-⎚^</h1>
+  </header>
+
+  <main>
+   
+    <div class="f4-highlight">
+      <img src="f4.jpg" alt="F4 Group Photo">
+    </div>
+
+    
+    <section id="us">
+      <h2>F4 WITH SHANGHAI (˶˃ ᵕ ˂˶)</h2>
+      <div class="bl-gallery">
+        <div class="bl-card"><img src="kyelle.png" alt="f4"><p>💙 Kyelle</p></div>
+        <div class="bl-card"><img src="mattan.png" alt="f4"><p>💜 Mattan</p></div>
+        <div class="bl-card"><img src="pia.png" alt="f4"><p>💙 Fyang</p></div>
+        <div class="bl-card"><img src="liansu.png" alt="f4"><p>💚 Lian</p></div>
+        <div class="bl-card"><img src="turon.png" alt="f4"><p>💙 Tyrone</p></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Made with love by <span>F4 Meteor Shower ₍𝄐 ̫͡ 𝄐₎</span></p>
+    <p>&copy; F4 with Shanghai.</p>
+  </footer>
+
+</body>
+</html>
